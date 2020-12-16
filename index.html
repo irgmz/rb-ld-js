@@ -47,7 +47,7 @@
         var showFeature = ldclient.variation("SayHelloButton", false);
         if (showFeature) {
 
-          var transformer = function(payload) { payload.feature_flags = 'SayHelloButton'; };
+          var transformer = function(payload) {payload.tags= [{ key: "feature_flag.key", value: "SayHelloButton"}]};
           Rollbar.configure({transform: transformer});
           Rollbar.critical("Uh oh! The user pressed the wrong button.");
         
