@@ -4,7 +4,7 @@
       <link rel="stylesheet" href="style.css">
         <script>
             var _rollbarConfig = {
-              accessToken: "004d66c2ab36482eb195c26b15701a5f",
+              accessToken: "token",
               captureUncaught: true,
               captureUnhandledRejections: true,
               payload: {
@@ -21,7 +21,7 @@
                   region: "aws-us-east-2"
                 },
                 custom: {
-                    bankTransactionId: "46456456456"
+                    bankTransactionId: "1234567890"
                 }
             }
         };
@@ -38,7 +38,7 @@
             "email": "ivan@rollbar.com"
         };
 
-        var ldclient = LDClient.initialize('5fda9dc0c0abbe0a3d2a0dff', user);
+        var ldclient = LDClient.initialize('token', user);
         ldclient.on('ready', createButton); 
         function createButton() {
 
